@@ -10,10 +10,12 @@ import Footer from './components/Footer'
 import SocialLinks from './components/SocialLinks'
 import Loader from './components/Loader'
 function App() {
-  const [loading, setLoading] = useState('')
+  const [loading, setLoading] = useState(true)
+
 
   const loadingFunction = () =>{
-    setLoading('none')
+    setLoading(false)
+
   }
   useEffect(()=>{
     setTimeout(loadingFunction, 3000)
@@ -21,17 +23,22 @@ function App() {
 
   return (
     <div>
-      <Loader loading={loading}/>
-      <Header />
       {
-        window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
+        loading ? <Loader loading={loading} /> 
+          :
+          <>
+            <Header />
+            {
+              window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
+            }
+            <Biography/>
+            <Dates/>
+            <Music/>
+            <Galery/>
+            <SocialLinks />
+            <Footer/>
+          </>
       }
-      <Biography/>
-      <Dates/>
-      <Music/>
-      <Galery/>
-      <SocialLinks />
-      <Footer/>
     </div>
   )
 }

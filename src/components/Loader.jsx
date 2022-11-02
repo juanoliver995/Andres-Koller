@@ -1,8 +1,8 @@
 
 
-const Loader = ({loading}) => {
+const Loader = () => {
   return (
-    <div className="loader-container" style={{display:`${loading}`}}>
+    <div className="loader-container" >
       <span className="loader"></span>
     </div>
   )
