@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import HeroImage from './components/HeroImage'
 import HeroVideo from './components/HeroVideo'
 import Header from './components/Header'
@@ -6,30 +6,32 @@ import Biography from './components/Biography'
 import Dates from './components/Dates'
 import Music from './components/Music'
 import Galery from './components/Galery'
+import Footer from './components/Footer'
+import SocialLinks from './components/SocialLinks'
+import Loader from './components/Loader'
 function App() {
+  const [loading, setLoading] = useState('')
 
-  const [muted, setMuted] = useState('muted')
-
-  const mutedVideo = ()=> {
-    if(muted === ''){
-      setMuted('muted')
-    }else{
-      setMuted('')
-    }
+  const loadingFunction = () =>{
+    setLoading('none')
   }
-
-  console.log(window.screen)
+  useEffect(()=>{
+    setTimeout(loadingFunction, 3000)
+  })
 
   return (
     <div>
-      <Header mutedVideo={mutedVideo} muted={muted} />
+      <Loader loading={loading}/>
+      <Header />
       {
-        window.screen.width > 480 ? <HeroImage /> : <HeroVideo muted={muted} />
+        window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
       }
       <Biography/>
       <Dates/>
       <Music/>
       <Galery/>
+      <SocialLinks />
+      <Footer/>
     </div>
   )
 }

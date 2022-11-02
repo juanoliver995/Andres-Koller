@@ -4,20 +4,114 @@ import three from '../assets/galery/_DSC1199-2.jpg'
 import four from '../assets/galery/foto2.jpg'
 import five from '../assets/galery/foto.jpg'
 import six from '../assets/galery/DSC09731.jpg'
-
+import { motion } from 'framer-motion'
 const Galery = () => {
   return (
     <div className="galery">
       <div className="container-galery">
-        <img src={one} className="one"/>
-        <div className='text-galery'>
-          <p>I’d like to make a little difference in this world and hope I can inspire others to do the same.</p> 
+        <div>
+          <motion.img 
+            initial={{
+              opacity: 0,
+              x: -200
+
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            src={one}
+          />
         </div>
-        <img src={two} className="two"/>
-        <img src={three} className="three"/>
-        <img src={four} className="four"/>
-        <img src={five} className="five"/>
-        <img src={six} className="six"/>
+        <div>
+          <motion.img
+            initial={{
+              opacity: 0,
+              x: 200
+
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            src={two}/>
+        </div>
+        <div>
+          <motion.img
+            initial={{
+              opacity: 0,
+              x: -200
+
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            src={four}/>
+        </div>
+        <div>
+          <motion.img
+            initial={{
+              opacity: 0,
+              x: 200
+
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            src={three}/>
+        </div>
+        <div>
+          <motion.img
+            initial={{
+              opacity: 0,
+              x: -200
+
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            src={six}/>
+        </div>
+        <div>
+          <motion.img
+            initial={{
+              opacity: 0,
+              x: 200
+
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            src={five}/>
+        </div>
       </div>
     </div>
   )

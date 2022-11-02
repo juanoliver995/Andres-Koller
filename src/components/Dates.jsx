@@ -1,15 +1,29 @@
-import eart from '../assets/vecteezy_spinning-black-and-white-globe-on-a-dark-background_3191217.mp4'
-
-import { useInView } from 'react-intersection-observer'
+import eart from '../assets/vecteezy.mp4'
+import { motion } from 'framer-motion'
 const Dates = () => {
-
-  const { ref: videoRef, inView: myElementVisible } = useInView()
-  console.log(myElementVisible)
-  
 
   return (
     <div className='dates'>
-      <video className={`${myElementVisible ? 'animate-eart' : ''}`} ref={videoRef} src={eart} autoPlay muted playsInline loop></video>
+      <motion.video
+        initial={{
+          opacity: 0,
+          y: -200
+
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0
+        }}
+        transition={{
+          duration: 2
+        }}
+        viewport={{ once: true }}
+        src={eart}
+        autoPlay
+        muted
+        playsInline
+        loop
+      ></motion.video>
       <div className='container-dates'>
         <div className='container-date'>
           <div className='info-date'>

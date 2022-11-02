@@ -1,11 +1,25 @@
 import andresBio from '../assets/andres-byn.png'
-
+import { motion } from 'framer-motion'
 const Biography = () => {
   return (
     <div className='biography'>
       <div className='info-biography'>
         <h2>My Biography</h2>
-        <p>Andres Koller is a DJ/Producer from Rosario,
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 200
+
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }}
+          transition={{
+            duration: 2
+          }}
+          viewport={{ once: true }}
+        >Andres Koller is a DJ/Producer from Rosario,
                   Argentina. At a very early age he realized the
                   electronic music is his passion. Currently, at the age
                   of 25, he has managed to perform in renowned
@@ -16,10 +30,40 @@ const Biography = () => {
                   others. Today he dedicates all his time to the music
                   to show the public his way of creating a unique
                   style when it comes to creating a DJ set and also
-                  when creating new music with its own brand.</p>
+                  when creating new music with its own brand.</motion.p>
+        <motion.div 
+          initial={{
+            opacity: 0,
+
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 2
+          }}
+          viewport={{ once: true }}
+          className='download-bio'
+        >
+          <a href='../../public/AndresKoller-Biography.pdf' download="Andres-Koller-Biography">Download Biography</a>
+        </motion.div>
       </div>
       <div className='img-biography'>
-        <img src={andresBio}/>
+        <motion.img 
+          initial={{
+            opacity: 0,
+            x: 200
+
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 2
+          }}
+          viewport={{ once: true }}
+          src={andresBio}/>
       </div>
     </div>
   )
