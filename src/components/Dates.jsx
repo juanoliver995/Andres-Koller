@@ -11,7 +11,7 @@ const Dates = () => {
 
         }}
         whileInView={{
-          opacity: 1,
+          opacity: 0.5,
           y: 0
         }}
         transition={{
@@ -19,9 +19,8 @@ const Dates = () => {
         }}
         viewport={{ once: true }}
         src={eart}
-        autoPlay
-        muted
-        playsInline
+        autoPlay={true}
+        muted={true}
         loop
       ></motion.video>
       <div className='container-dates'>
@@ -60,6 +59,46 @@ const Dates = () => {
             <time>Nov 21</time>
             <strong>Santa Fe, Arg</strong>
             <p>4get</p>
+          </div>
+          <div className='btn-tickets'>
+            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
+          </div>
+        </div>
+        <div className='container-date'>
+          <div className='info-date'>
+            <time>DEC 10</time>
+            <strong>Santiago, Chi</strong>
+            <p>Club Room</p>
+          </div>
+          <div className='btn-tickets'>
+            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
+          </div>
+        </div>
+        <div className='container-date'>
+          <div className='info-date'>
+            <time>DEC 10</time>
+            <strong>Santiago, Chi</strong>
+            <p>Club Room</p>
+          </div>
+          <div className='btn-tickets'>
+            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
+          </div>
+        </div>
+        <div className='container-date'>
+          <div className='info-date'>
+            <time>DEC 10</time>
+            <strong>Santiago, Chi</strong>
+            <p>Club Room</p>
+          </div>
+          <div className='btn-tickets'>
+            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
+          </div>
+        </div>
+        <div className='container-date'>
+          <div className='info-date'>
+            <time>DEC 10</time>
+            <strong>Santiago, Chi</strong>
+            <p>Club Room</p>
           </div>
           <div className='btn-tickets'>
             <a className="custom-btn btn-7"><span>Buy Tickets</span></a>

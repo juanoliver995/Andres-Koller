@@ -186,12 +186,30 @@ body {
   opacity: .5;
 }
 
+.container-dates::-webkit-scrollbar {
+  width: 5px;
+
+}
+
+.container-dates::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+.container-dates::-webkit-scrollbar-thumb {
+  background-color: var(--ligth-color);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+
 
 .container-dates {
   position: relative;
   width: 100%;
   z-index: 1;
   padding: 0 20px;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
 .container-date {
@@ -557,7 +575,7 @@ body {
   height: 30px;
   position: absolute;
   right: 50%;
-  width: 40px;
+  width: 20px;
   margin-top: -40px;
 }
 
@@ -678,7 +696,7 @@ body {
   }
 
   .container-dates {
-    margin-top: -400px;
+    margin-top: -40px;
   }
 
   .galery {
