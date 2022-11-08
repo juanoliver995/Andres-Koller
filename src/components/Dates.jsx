@@ -1,7 +1,10 @@
 import eart from '../assets/vecteezy.mp4'
 import { motion } from 'framer-motion'
-const Dates = () => {
+import Date from './Date'
+import useDates from '../hooks/useDates'
 
+const Dates = () => {
+  const {dates} = useDates()
   return (
     <div className='dates'>
       <motion.video
@@ -24,96 +27,11 @@ const Dates = () => {
         loop
       ></motion.video>
       <div className='container-dates'>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>Nov 4</time>
-            <strong>Cordoba, Arg</strong>
-            <p>La Fabrica - Pan-Pot</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>Nov 11</time>
-            <strong>Buenos Aires, Arg</strong>
-            <p>Crobar - Nicolas Taboada</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>Nov 12</time>
-            <strong>Rosario, Arg</strong>
-            <p>Switch</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>Nov 21</time>
-            <strong>Santa Fe, Arg</strong>
-            <p>4get</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>DEC 10</time>
-            <strong>Santiago, Chi</strong>
-            <p>Club Room</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>DEC 10</time>
-            <strong>Santiago, Chi</strong>
-            <p>Club Room</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>DEC 10</time>
-            <strong>Santiago, Chi</strong>
-            <p>Club Room</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>DEC 10</time>
-            <strong>Santiago, Chi</strong>
-            <p>Club Room</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
-        <div className='container-date'>
-          <div className='info-date'>
-            <time>DEC 10</time>
-            <strong>Santiago, Chi</strong>
-            <p>Club Room</p>
-          </div>
-          <div className='btn-tickets'>
-            <a className="custom-btn btn-7"><span>Buy Tickets</span></a>
-          </div>
-        </div>
+        {dates.map((date)=> {
+          return(
+            <Date date={date} key={date._id}/>
+          ) 
+        })}
       </div>
     </div>
   )

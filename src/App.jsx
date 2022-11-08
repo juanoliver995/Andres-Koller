@@ -1,45 +1,32 @@
-import { useState, useEffect } from 'react'
-import HeroImage from './components/HeroImage'
-import HeroVideo from './components/HeroVideo'
-import Header from './components/Header'
-import Biography from './components/Biography'
-import Dates from './components/Dates'
-import Music from './components/Music'
-import Galery from './components/Galery'
-import Footer from './components/Footer'
-import SocialLinks from './components/SocialLinks'
-import Loader from './components/Loader'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Index from './Paginas/Index'
+import Admin from './Paginas/Admin'
+import LoginPage from './Paginas/LoginPage'
+import DatesAdmin from './components/DatesAdmin'
+import NewDate from './components/NewDate'
+import DateAdmin from './components/DateAdmin'
+import { DatesProvider } from './context/DatesProvider'
+import EditDate from './components/EditDate'
 function App() {
-  const [loading, setLoading] = useState(true)
 
-
-  const loadingFunction = () =>{
-    setLoading(false)
-
-  }
-  useEffect(()=>{
-    setTimeout(loadingFunction, 3000)
-  })
 
   return (
-    <div>
-      {
-        loading ? <Loader loading={loading} /> 
-          :
-          <>
-            <Header />
-            {
-              window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
-            }
-            <Biography/>
-            <Dates/>
-            <Music/>
-            <Galery/>
-            <SocialLinks />
-            <Footer/>
-          </>
-      }
-    </div>
+    <BrowserRouter>
+      <DatesProvider>
+        <Routes>
+          <Route path='/'  element={<Index/>}></Route>
+          <Route path='/login'  element={<LoginPage/>}></Route>
+
+        
+          <Route path='/admin' element={<Admin />}>
+            <Route index element={<DatesAdmin />}/>
+            <Route path='newdate' element={<NewDate />}/>
+            <Route path=':id' element={<DateAdmin />}/>
+            <Route path='editdate/:id' element={<EditDate />}/>
+          </Route>
+        </Routes>
+      </DatesProvider>
+    </BrowserRouter>
   )
 }
 
