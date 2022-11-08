@@ -1,5 +1,6 @@
 import andresBio from '../assets/andres-byn.png'
 import { motion } from 'framer-motion'
+import biografy from '../assets/AndresKoller-Biography.pdf'
 const Biography = () => {
   return (
     <div className='biography'>
@@ -45,7 +46,7 @@ const Biography = () => {
           viewport={{ once: true }}
           className='download-bio'
         >
-          <a href='../../public/AndresKoller-Biography.pdf' download="Andres-Koller-Biography">Download Biography</a>
+          <a href={biografy} download="Andres-Koller-Biography">Download Biography</a>
         </motion.div>
       </div>
       <div className='img-biography'>
