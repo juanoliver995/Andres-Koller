@@ -11,12 +11,15 @@ const HeroVideo = () => {
   const userMutedAccion = () => {
     setMuted(true)
     setViewMuted(false)
+    const video = document.getElementById('video-hero')
+    video.play()
 
   }
   const userUnMutedAccion = () => {
     setMuted(false)
     setViewMuted(false)
-
+    const video = document.getElementById('video-hero')
+    video.play()
   }
 
   const mutedVideo = () => {
@@ -31,7 +34,7 @@ const HeroVideo = () => {
       {
         viewMuted ? <MutedVideo userMutedAccion={userMutedAccion} userUnMutedAccion={userUnMutedAccion} /> : ''
       }
-      <video autoPlay={true} src={video} muted={muted} playsInline loop preload="auto"/>
+      <video src={video} muted={muted} playsInline loop preload="auto" id="video-hero"/>
       <div className='container-sound'>
         <button onClick={() => mutedVideo()} className="btn-muted">
           {

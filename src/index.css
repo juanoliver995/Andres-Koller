@@ -566,6 +566,8 @@ body {
   padding: 8px 16px;
   font-size: 18px;
   font-family: Reload-Bold;
+  background-color: var(--ligth-color);
+  color: var(--bg-color);
 }
 
 .container-unmuted {
@@ -579,6 +581,8 @@ body {
   padding: 8px 16px;
   font-size: 18px;
   font-family: Reload-Bold;
+  background-color: var(--ligth-color);
+  color: var(--bg-color);
 }
 
 /* sound wave */
