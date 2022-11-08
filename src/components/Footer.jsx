@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -18,6 +18,7 @@ const Footer = () => {
         </div>
         <div>
           <p>WEBSITE BY JUAN OLIVER</p>
+          <Link to="/login">ir al login</Link>
         </div>
       </div>
     </div>
