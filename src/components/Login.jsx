@@ -58,6 +58,7 @@ const Login = () => {
             <div>
               <label htmlFor="username">Username</label>
               <input
+                className='input-form-login'
                 type="text"
                 placeholder='Username'
                 id="username"
@@ -68,6 +69,7 @@ const Login = () => {
             <div>
               <label htmlFor="password">Password</label>
               <input 
+                className='input-form-login'
                 type="password"
                 placeholder="Password"
                 id="password"

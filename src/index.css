@@ -384,11 +384,13 @@ body {
 }
 
 .container-galery img {
-  max-height: 500px;
+  max-height: 400px;
   width: 100%;
   object-fit: contain;
   overflow: hidden;
 }
+
+
 
 /* Social links */
 
@@ -683,6 +685,7 @@ body {
   margin: 0 auto;
 }
 
+
 .container-form-login p {
   text-align: center;
   font-size: 22px;
@@ -698,19 +701,27 @@ body {
   margin: 10px auto;
 }
 
-.form-login input {
+.input-form-login {
   width: 100%;
   font-size: 18px;
   outline: none;
   padding: 5px;
   border-radius: 5px;
   border: none;
+  color: var(--bg-color);
 }
 
 .submit-login {
   margin-top: 20px;
   background-color: var(--bg-color);
   color: var(--ligth-color);
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+
 }
 
 .error-auth p {
