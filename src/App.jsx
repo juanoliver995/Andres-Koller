@@ -9,8 +9,8 @@ import { DatesProvider } from './context/DatesProvider'
 import EditDate from './components/EditDate'
 function App() {
   return (
-    <BrowserRouter>
-      <DatesProvider>
+    <DatesProvider>
+      <BrowserRouter>
         <Routes>
           <Route path='/'  element={<Index/>}></Route>
           <Route path='/login'  element={<LoginPage/>}></Route>
@@ -23,8 +23,8 @@ function App() {
             <Route path='editdate/:id' element={<EditDate />}/>
           </Route>
         </Routes>
-      </DatesProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </DatesProvider>
   )
 }
 
