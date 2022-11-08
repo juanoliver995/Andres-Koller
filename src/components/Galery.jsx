@@ -29,7 +29,7 @@ const Galery = () => {
           <motion.img
             initial={{
               opacity: 0,
-              x: -200
+              x: 200
 
             }}
             whileInView={{
@@ -46,7 +46,7 @@ const Galery = () => {
           <motion.img
             initial={{
               opacity: 0,
-              x: 200
+              x: -200
 
             }}
             whileInView={{
@@ -63,7 +63,7 @@ const Galery = () => {
           <motion.img
             initial={{
               opacity: 0,
-              x: -200
+              x: 200
 
             }}
             whileInView={{

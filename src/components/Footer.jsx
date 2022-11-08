@@ -13,12 +13,11 @@ const Footer = () => {
           <h3>For Promos</h3>
           <a href='mailto:promos.andreskoller@gmail.com'>Promos.andreskoller@gmail.com</a>
         </div>
-        <div>
-          <p>© COPYRIGHT ANDRES KOLLER 2022</p>
+        <div className='link-secret'>
+          <Link to="/login">© COPYRIGHT ANDRES KOLLER 2022</Link>
         </div>
         <div>
           <p>WEBSITE BY JUAN OLIVER</p>
-          <Link to="/login">ir al login</Link>
         </div>
       </div>
     </div>

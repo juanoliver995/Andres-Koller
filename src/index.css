@@ -470,6 +470,11 @@ body {
 
 }
 
+.link-secret a {
+  opacity: 1;
+  cursor: unset;
+}
+
 .bookin img {
   width: 30px;
   height: 30px;

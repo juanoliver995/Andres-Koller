@@ -14,8 +14,6 @@ function App() {
         <Routes>
           <Route path='/'  element={<Index/>}></Route>
           <Route path='/login'  element={<LoginPage/>}></Route>
-
-        
           <Route path='/admin' element={<Admin />}>
             <Route index element={<DatesAdmin />}/>
             <Route path='newdate' element={<NewDate />}/>
