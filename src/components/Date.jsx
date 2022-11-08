@@ -6,8 +6,8 @@ const Date = ({ date }) => {
     <div className='container-date'>
       <div className='info-date'>
         <time>{month} {day}</time>
-        <strong>{province}, {country}</strong>
-        <p>{club}</p>
+        <strong>{club}, {country}</strong>
+        <p>{province}</p>
       </div>
       <div className='btn-tickets'>
         <a target="_blank" href={`${urlTickets}`} className="custom-btn btn-7" rel="noreferrer"><span>Buy Tickets</span></a>
