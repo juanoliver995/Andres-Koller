@@ -45,7 +45,7 @@ const Biography = () => {
           viewport={{ once: true }}
           className='download-bio'
         >
-          <a href='./AndresKoller-Biography.pdf' download="Andres-Koller-Biography">Download Biography</a>
+          <a href='../../public/AndresKoller-Biography.pdf' download="Andres-Koller-Biography">Download Biography</a>
         </motion.div>
       </div>
       <div className='img-biography'>
