@@ -11,7 +11,7 @@ const Login = () => {
     if(userLogged !== null){
       navigate('/admin')
     }
-  })
+  },[])
   
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     try {
-      fetch('http://localhost:4000/api/users/login',{
+      fetch('https://andres-back-production.up.railway.app/api/users/login',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

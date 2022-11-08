@@ -16,12 +16,12 @@ const Index = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/dates')
+    fetch('https://andres-back-production.up.railway.app/api/dates')
       .then((res) => res.json())
       .then((data) => setDates(data))
       .catch((err) => console.log(err))
     setLoading(false)
-  })
+  },[])
 
   return (
     <div>

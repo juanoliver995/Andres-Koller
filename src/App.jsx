@@ -8,8 +8,6 @@ import DateAdmin from './components/DateAdmin'
 import { DatesProvider } from './context/DatesProvider'
 import EditDate from './components/EditDate'
 function App() {
-
-
   return (
     <BrowserRouter>
       <DatesProvider>

@@ -11,7 +11,7 @@ const Admin = () => {
     if (userLogged === null) {
       navigate('/login')
     }
-  })
+  },[])
 
   return (
     <div>
