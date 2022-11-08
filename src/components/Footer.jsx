@@ -17,7 +17,7 @@ const Footer = () => {
           <Link to="/login">© COPYRIGHT ANDRES KOLLER 2022</Link>
         </div>
         <div>
-          <p>WEBSITE BY JUAN OLIVER</p>
+          <a target="_blank" href='https://www.instagram.com/juan.oliver/?hl=es-la' rel="noreferrer">WEBSITE BY JUAN OLIVER</a>
         </div>
       </div>
     </div>
