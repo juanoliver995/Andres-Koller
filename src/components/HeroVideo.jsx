@@ -1,10 +1,25 @@
 import video from '../assets/andres-web.mp4'
 
+import { useState } from 'react'
+import MutedVideo from './MutedVideo'
+
 const HeroVideo = () => {
+
+  const [viewMuted, setViewMuted] = useState(true)
+
+
+  const userUnMutedAccion = () => {
+    setViewMuted(false)
+    const video = document.getElementById('video-hero')
+    video.play()
+  }
 
   return (
     <div className='hero-video'>
-      <video src={video} muted={true} autoPlay={true} playsInline={true} loop id="video-hero"/>
+      {
+        viewMuted ? <MutedVideo  userUnMutedAccion={userUnMutedAccion} /> : ''
+      }
+      <video muted={true} src={video} loop preload="auto" id="video-hero"/>
     </div>
   )
 }
