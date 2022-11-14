@@ -8,7 +8,7 @@ const HeroVideo = () => {
 
   return (
     <div className='hero-video'>
-      <video muted={true} src={video} loop preload="auto" id="video-hero"/>
+      <video muted={true} autoPlay={true} src={video} loop preload="auto" id="video-hero"/>
     </div>
   )
 }
