@@ -1,12 +1,17 @@
 
 const Date = ({ date }) => {
 
-  const { day, month, province, country, club, urlTickets } = date
+  const { day, month, province, country, club, urlTickets, artist } = date
   return (
     <div className='container-date'>
       <div className='info-date'>
         <time>{month} {day}</time>
-        <strong>{club}, {country}</strong>
+        {
+          artist 
+            ? <strong>{club} w/{artist}, {country}</strong>
+            : <strong>{club}, {country}</strong>
+        }
+        
         <p>{province}</p>
       </div>
       <div className='btn-tickets'>

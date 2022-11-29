@@ -472,9 +472,8 @@ body {
 
 }
 
-.link-secret a {
-  opacity: 1;
-  cursor: unset;
+.link-secret {
+  font-size: 22px;
 }
 
 .bookin img {

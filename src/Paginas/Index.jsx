@@ -7,11 +7,21 @@ import Music from '../components/Music'
 import Galery from '../components/Galery'
 import Footer from '../components/Footer'
 import SocialLinks from '../components/SocialLinks'
-
+import { useState, useEffect } from 'react'
 
 const Index = () => {
 
+  const [dates, setDates] = useState([])
 
+  useEffect(() => {
+    const getDates = () => {
+      fetch('https://back-admin-dates-production.up.railway.app/api/dates/site/638660e6fa8a1f1fff145feb')
+        .then(res => res.json())
+        .then(data => setDates(data))
+        .catch(err => console.log(err))
+    }
+    getDates()
+  }, [])
   return (
     <div>
       <Header />
@@ -19,7 +29,7 @@ const Index = () => {
         window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
       }
       <Biography />
-      <Dates />
+      <Dates dates={dates}/>
       <Music />
       <Galery />
       <SocialLinks />

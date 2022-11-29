@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
           <a href='mailto:promos.andreskoller@gmail.com'>Promos.andreskoller@gmail.com</a>
         </div>
         <div className='link-secret'>
-          <Link to="/login">© COPYRIGHT ANDRES KOLLER 2022</Link>
+          <p>© COPYRIGHT ANDRES KOLLER 2022</p>
         </div>
         <div>
           <a target="_blank" href='https://www.instagram.com/juan.oliver/?hl=es-la' rel="noreferrer">WEBSITE BY JUAN OLIVER</a>

@@ -1,10 +1,9 @@
 import eart from '../assets/vecteezy.mp4'
 import { motion } from 'framer-motion'
-import Date from './Date'
-import useDates from '../hooks/useDates'
+import Date from '../components/Date'
 
-const Dates = () => {
-  const {dates} = useDates()
+const Dates = ({dates}) => {
+
   return (
     <div className='dates'>
       <motion.video
@@ -27,11 +26,11 @@ const Dates = () => {
         loop
       ></motion.video>
       <div className='container-dates'>
-        {dates.map((date)=> {
-          return(
+        {
+          dates.map(date => (
             <Date date={date} key={date._id}/>
-          ) 
-        })}
+          ))
+        }
       </div>
     </div>
   )
