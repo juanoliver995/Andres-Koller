@@ -746,7 +746,36 @@ select {
   color: var(--bg-color)
 }
 
+.modal {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  background-color: black;
+  height: 100vh;
+}
 
+.modal h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.modal img {
+  margin: 0 auto;
+  width: 45%;
+}
+
+.modal button {
+  margin: 0 auto;
+  border: 1px solid white;
+  padding: 8px 14px;
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+}
 
 @media (max-width: 780px) {
   .biography {
@@ -809,6 +838,11 @@ select {
 
   .container-galery img {
     max-height: none;
+  }
+
+  .modal img {
+    margin: 0 auto;
+    width: 90%;
   }
 }
 
