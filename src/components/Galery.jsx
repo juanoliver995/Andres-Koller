@@ -23,6 +23,7 @@ const Galery = () => {
             }}
             viewport={{ once: true }}
             src={one}
+            alt="Andres Koller tocando musica en vivo"
           />
         </div>
         <div>
@@ -40,7 +41,9 @@ const Galery = () => {
               duration: 1
             }}
             viewport={{ once: true }}
-            src={four}/>
+            src={four}
+            alt="Andres Koller tocando musica en vivo"
+          />
         </div>
         <div>
           <motion.img
@@ -57,7 +60,9 @@ const Galery = () => {
               duration: 1
             }}
             viewport={{ once: true }}
-            src={three}/>
+            src={three}
+            alt="Andres Koller tocando musica en vivo"
+          />
         </div>
         <div>
           <motion.img
@@ -74,7 +79,9 @@ const Galery = () => {
               duration: 1
             }}
             viewport={{ once: true }}
-            src={six}/>
+            src={six}
+            alt="Andres Koller tocando musica en vivo"
+          />
         </div>
       </div>
     </div>

@@ -64,7 +64,9 @@ const Biography = () => {
             duration: 2
           }}
           viewport={{ once: true }}
-          src={andresBio}/>
+          src={andresBio}
+          alt="Andres Koller"
+        />
       </div>
     </div>
   )
