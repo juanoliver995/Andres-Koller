@@ -7,12 +7,12 @@ import Music from '../components/Music'
 import Galery from '../components/Galery'
 import Footer from '../components/Footer'
 import SocialLinks from '../components/SocialLinks'
+import Resonate from '../components/Resonate'
 import { useState, useEffect } from 'react'
-import Modal from '../components/Modal'
+
 const Index = () => {
 
   const [dates, setDates] = useState([])
-  const [modal, setModal] = useState(true)
 
   useEffect(() => {
     const getDates = () => {
@@ -25,15 +25,12 @@ const Index = () => {
   }, [])
   return (
     <div>
-      {
-        modal && <Modal setModal={setModal} />
-      }
-      
       <Header />
       {
         window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
       }
       <Biography />
+      <Resonate />
       <Dates dates={dates}/>
       <Music />
       <Galery />
