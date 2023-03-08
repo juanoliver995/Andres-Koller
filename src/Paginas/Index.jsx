@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 import SocialLinks from '../components/SocialLinks'
 import Resonate from '../components/Resonate'
 import { useState, useEffect } from 'react'
-
+import  Newsletter  from '../components/Newsletter'
 const Index = () => {
 
   const [dates, setDates] = useState([])
@@ -34,7 +34,10 @@ const Index = () => {
       <Dates dates={dates}/>
       <Music />
       <Galery />
-      <SocialLinks />
+      <div className='container-newsletter-social'>
+        <Newsletter />
+        <SocialLinks />
+      </div>
       <Footer />
     </div>
   )

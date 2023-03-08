@@ -534,245 +534,6 @@ body {
   }
 }
 
-.user-muted {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 3;
-  background-color: var(--bg-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 1;
-}
-
-.muted-container {
-  position: relative;
-  display: grid;
-  place-content: center;
-  width: 80%;
-  justify-content: center;
-  margin: 0 auto;
-  text-align: center;
-  gap: 20px;
-}
-
-.muted-container button {
-  padding: 8px 16px;
-  font-size: 18px;
-  font-family: Reload-Bold;
-  background-color: var(--ligth-color);
-  color: var(--bg-color);
-}
-
-.container-unmuted {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 20px;
-}
-
-.container-unmuted button {
-  padding: 8px 16px;
-  font-size: 18px;
-  font-family: Reload-Bold;
-  background-color: var(--ligth-color);
-  color: var(--bg-color);
-}
-
-/* sound wave */
-
-#bars {
-  height: 30px;
-  position: absolute;
-  right: 50%;
-  width: 20px;
-  margin-top: -40px;
-}
-
-.bar {
-  background: #ffffff;
-  bottom: 1px;
-  height: 3px;
-  position: absolute;
-  width: 3px;
-  animation: sound 0ms -800ms linear infinite alternate;
-}
-
-@keyframes sound {
-  0% {
-    opacity: .35;
-    height: 3px;
-  }
-
-  100% {
-    opacity: 1;
-    height: 28px;
-  }
-}
-
-.bar:nth-child(1) {
-  left: 1px;
-  animation-duration: 474ms;
-}
-
-.bar:nth-child(2) {
-  left: 5px;
-  animation-duration: 433ms;
-}
-
-.bar:nth-child(3) {
-  left: 9px;
-  animation-duration: 407ms;
-}
-
-.bar:nth-child(4) {
-  left: 13px;
-  animation-duration: 458ms;
-}
-
-.bar:nth-child(5) {
-  left: 17px;
-  animation-duration: 400ms;
-}
-
-.bar:nth-child(6) {
-  left: 21px;
-  animation-duration: 427ms;
-}
-
-.bar:nth-child(7) {
-  left: 25px;
-  animation-duration: 441ms;
-}
-
-.bar:nth-child(8) {
-  left: 29px;
-  animation-duration: 419ms;
-}
-
-.bar:nth-child(9) {
-  left: 33px;
-  animation-duration: 487ms;
-}
-
-.bar:nth-child(10) {
-  left: 37px;
-  animation-duration: 442ms;
-}
-
-/* Login */
-
-.container-login {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-.container-login h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.container-form-login {
-  background-color: #0e0e0e;
-  padding: 20px;
-  border-radius: 5px;
-  width: 95%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-
-.container-form-login p {
-  text-align: center;
-  font-size: 22px;
-}
-
-.form-login {
-  margin-top: 20px;
-}
-
-.form-login label {
-  display: block;
-  font-size: 18px;
-  margin: 10px auto;
-}
-
-.input-form-login {
-  width: 100%;
-  font-size: 18px;
-  outline: none;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  color: var(--bg-color);
-}
-
-.submit-login {
-  margin-top: 20px;
-  background-color: var(--bg-color);
-  color: var(--ligth-color);
-  width: 100%;
-  font-size: 18px;
-  outline: none;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-
-}
-
-.error-auth p {
-  font-size: 16px;
-  color: red;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.succes-auth {
-  font-size: 16px;
-  color: var(--ligth-color);
-  margin-top: 10px;
-  text-align: center;
-}
-
-.form-date input,
-select {
-  color: var(--bg-color)
-}
-
-.modal {
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  margin: 0 auto;
-  display: grid;
-  place-content: center;
-  background-color: black;
-  height: 100vh;
-}
-
-.modal h2 {
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-
-.modal img {
-  margin: 0 auto;
-  width: 45%;
-}
-
-.modal button {
-  margin: 0 auto;
-  border: 1px solid white;
-  padding: 8px 14px;
-  width: 90%;
-  max-width: 400px;
-  margin-top: 20px;
-}
-
 .resonate {
   width: 95%;
   margin: 0 auto;
@@ -811,6 +572,85 @@ select {
 .resonate img {
   width: 100%;
   max-width: 700px;
+}
+
+.container-newsletter-social {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  width: 100%;
+}
+
+.newsletter h2 {
+  font-size: 30px;
+}
+
+form {
+  display: flex;
+  align-items: stretch;
+  margin-top: 30px;
+  font-family: Reload-Regular;
+  align-items: center;
+  gap: 10px;
+}
+
+.field {
+  width: 100%;
+}
+
+.field input {
+  font-size: 16px;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  font-family: Reload-Regular;
+  outline: none;
+  border: 1px solid white;
+}
+
+input[type="submit"] {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: black;
+  border: 1px solid black;
+  padding: 8px 16px;
+  background-color: white;
+  font-family: Reload-Regular;
+  height: 100%;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  text-align: center;
+  width: 60%;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: black;
+  transition: all ease-in-out .3s;
+}
+
+@media (max-width: 900px) {
+  .container-newsletter-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  input[type="submit"] {
+    width: unset;
+  }
 }
 
 @media (max-width: 780px) {
