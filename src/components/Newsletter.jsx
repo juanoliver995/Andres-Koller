@@ -6,7 +6,7 @@ const Newsletter = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
-    
+
     emailjs.sendForm('service_1j4pfp8', 'template_ukhdocp', form.current, 'kG52zHNRR52Ueiugb')
       .then((result) => {
         console.log(result.text)

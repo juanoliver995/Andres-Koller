@@ -10,9 +10,11 @@ import SocialLinks from '../components/SocialLinks'
 import Resonate from '../components/Resonate'
 import { useState, useEffect } from 'react'
 import  Newsletter  from '../components/Newsletter'
+import Modal from '../components/Modal'
 const Index = () => {
 
   const [dates, setDates] = useState([])
+  const [modalOpen, setModaleOpen] = useState(true)
 
   useEffect(() => {
     const getDates = () => {
@@ -25,6 +27,9 @@ const Index = () => {
   }, [])
   return (
     <div>
+      {
+        modalOpen ? <Modal setModal={setModaleOpen}/> : ''
+      }
       <Header />
       {
         window.screen.width > 480 ? <HeroImage /> : <HeroVideo />
